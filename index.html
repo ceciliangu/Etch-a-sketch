@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Etch-a-Sketch Challenge</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="app-container">
+        <main class="workspace">
+            <div class="box target-box">
+                <h2>Target Challenge</h2>
+                <div class="target-container"></div>
+            </div>
+
+            <div class="main-column">
+                <section class="header-section">
+                    <h1>Etch-a-Sketch</h1>
+                    <div class="controls">
+                        <span class="controls-title">Colour Selector:</span>
+                        <button class="rainbow">Rainbow</button>
+                        <button class="black active">Black</button>
+                        <select name="color" class="colorSelector">
+                            <option value="red">Red</option>
+                            <option value="green">Green</option>
+                            <option value="blue">Blue</option>
+                            <option value="yellow">Yellow</option>
+                            <option value="purple">Purple</option>
+                            <option value="orange">Orange</option>
+                            <option value="pink">Pink</option>
+                            <option value="brown">Brown</option>
+                        </select>
+                        <button class="reset">Reset Layout</button>
+                    </div>
+
+                    <div class="challenges-bar">
+                        <span class="challenges-title">Challenges:</span>
+                        <button class="challenge-btn active" data-index="0">Heart</button>
+                        <button class="challenge-btn" data-index="1">Smiley</button>
+                        <button class="challenge-btn" data-index="2">Star</button>
+                        <button class="challenge-btn" data-index="3">Tree</button>
+                        <button class="challenge-btn" data-index="4">House</button>
+                    </div>
+                </section>
+
+                <div class="box canvas-box">
+                    <h2>Your Drawing</h2>
+                    <article class="container"></article>
+                </div>
+            </div>
+
+            <div class="balance-spacer" aria-hidden="true"></div>
+        </main>
+    </div>
+    <script src="javascriptfile.js"></script>
+</body>
+
+</html>

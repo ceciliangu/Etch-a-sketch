@@ -1,0 +1,226 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap');
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #0d5c63;
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    margin: 0;
+    min-height: 100vh;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow-x: hidden;
+}
+
+.app-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 1100px;
+    margin: auto;
+}
+
+h1 {
+    text-align: center;
+    color: white;
+    background-color: #111;
+    padding: 10px 24px;
+    border-radius: 8px;
+    margin: 0 0 12px 0;
+    display: inline-block;
+}
+
+.header-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.controls,
+.challenges-bar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    flex-wrap: nowrap;
+    white-space: nowrap;
+}
+
+button,
+select {
+    font-family: inherit;
+    font-size: 0.9rem;
+    font-weight: 600;
+    padding: 7px 14px;
+    background-color: #ffffff;
+    color: #222;
+    border: 2px solid #333;
+    border-radius: 6px;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: transform 0.1s, background-color 0.15s;
+}
+
+button:hover {
+    background-color: #f0f0f0;
+    transform: translateY(-1px);
+}
+
+button:active {
+    transform: translateY(1px);
+}
+
+.challenge-btn.active,
+.controls .rainbow.active,
+.controls .black.active,
+.controls .colorSelector.active {
+    background-color: #ffd166;
+    border-color: #d4a373;
+    color: #222;
+}
+
+.check-btn {
+    background-color: #06d6a0;
+    color: #000;
+    font-weight: bold;
+}
+
+.check-btn:hover {
+    background-color: #05c08f;
+}
+
+button.reset {
+    background-color: #e63946;
+    color: #ffffff;
+    border-color: #222;
+}
+
+button.reset:hover {
+    background-color: #d62839;
+}
+
+.status {
+    background: #111;
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-size: 0.88rem;
+}
+
+.score-display {
+    font-size: 0.95rem;
+    font-weight: bold;
+    color: #ffd166;
+    margin-left: 6px;
+}
+
+
+.workspace {
+    display: flex;
+    gap: 2rem;
+    align-items: flex-end;
+    justify-content: center;
+    width: 100%;
+}
+
+.main-column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.target-box {
+    margin-bottom: 100px;
+}
+
+.balance-spacer {
+    width: 240px;
+    flex-shrink: 0;
+}
+
+@media (max-width: 1024px) {
+    .balance-spacer {
+        display: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .workspace {
+        flex-direction: column;
+        align-items: center;
+    }
+    .target-box {
+        margin-bottom: 0;
+    }
+    .controls {
+        flex-wrap: wrap;
+    }
+}
+
+.box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.box h2 {
+    font-size: 1.1rem;
+    margin: 0 0 10px 0;
+    color: #e0f2f1;
+    text-align: center;
+}
+
+.target-container {
+    display: grid;
+    width: 240px;
+    height: 240px;
+    background-color: white;
+    border: 12px solid #2b2d42;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.target-grid {
+    background-color: white;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.container {
+    display: grid;
+    width: 440px;
+    height: 440px;
+    border: 28px groove #c1121f;
+    background-color: white;
+    border-radius: 24px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+    cursor: pointer;
+    user-select: none;
+}
+
+.container.drawing-active {
+    cursor: crosshair;
+    border-color: #e63946;
+}
+
+.grid {
+    background-color: white;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.grid:hover {
+    background-color: #ffd166;
+}
